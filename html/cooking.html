@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>잡채 레시피</title>
+  <link rel="stylesheet" href="../css/mystyle.css">
+  <style>
+    body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+    aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #999988;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    }
+    main {
+    margin-left: 30%;
+    padding: 20px;
+    box-sizing: border-box;
+    }
+    body.scroll-aside aside {
+    transform: translateY(0);
+    }
+    .article1 {
+    float: right;
+    padding: 20px;
+    box-sizing:border-box; 
+           /* 박스모델에서 박스의 크기는 기본적으로 콘텐츠의 크기만 계산(box-sizing:content-box;)
+           아래에서 넓이를 70%로 지정했는데 패딩의 크기가 20px이 있어 실제 크기는 70%를 초과하게 됨
+           box-sizing을 border-box 로 지정하면 **박스 크기 = 콘텐츠 크기+padding크기+border크기의 합**
+           패딩의 크기를 포함한 article 영역의 전체 넓이를 70%로 맞추기 위해 border-box로 지정함 */
+    width: 70%;
+    background-color: #f1f1f1;
+    height: auto; /* only for demonstration, should be removed */
+    overflow-y: auto
+    }
+  </style>
+</head>
+<body>
+  <svg height="120" width="100%">
+    <!-- <defs> 요소는 그래픽 객체를 정의, <def> 요소 내에서 만든 객체는 출력되는 것은 아님
+         나중에 사용하려면 fill 속성에 참조 연결하거나 <use> 요소를 이용해야함 
+         <def> 요소 내에 선형그레디언트 정의 -->
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#973131;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(34, 141, 141);stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <rect fill="url(#grad1)" x="0" y="0" width="100%" height="120" />
+    <text fill="#ffffff" font-size="60" font-family="Verdana" x="50" y="80">컴퓨터공학과 20200158 김찬영</text>
+    Sorry, your browser does not support inline SVG.
+  </svg>
+    
+  <ul>
+    <li><a class="active" href="https://cksdud1202a.github.io/23webproject">Home</a></li>
+    <li><a href="./cooking.html">요리</a></li>
+    <li><a href="./playlist.html">플레이리스트</a></li>
+    <li><a href="./travel.html">여행지</a></li>
+    <li><a href="./drama.html">드라마</a></li>
+  </ul>
+
+  <div>
+    <ul class="vertical-menu">
+      <li class="vertical-menu-item"><a href="./cooking.html">잡채</a></li>
+      <li class="vertical-menu-item"><a href="../cooking_html/doenjang.html">된장찌개</a></li>
+      <li class="vertical-menu-item"><a href="../cooking_html/noodle.html">비빔국수</a></a></li>
+      <li class="vertical-menu-item"><a href="../cooking_html/egg.html">에그드랍</a></li>
+    </ul>
+  </div>
+  <script>
+    window.addEventListener('scroll', function() {
+      const body = document.body;
+      const aside = document.querySelector('aside');
+      const bodyScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      
+      if (bodyScrollTop > 0) {
+        body.classList.add('scroll-aside');
+      } else {
+        body.classList.remove('scroll-aside');
+      }
+    });
+  </script>
+    <h1 id="box2">잡채</h1>
+  <aside>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="video"> 
+      <div class="video-wrapper">
+        <iframe width="520" height="450" src="https://www.youtube.com/embed/fppre9NkfJA"></iframe>
+      </div>
+    </div>
+    <div class="source">
+      <a href="https://www.youtube.com/embed/fppre9NkfJA">레시피 출처: 1분요리 뚝딱이형</a>
+    </div>
+  </aside>
+
+  <article class="article1" style="display: flex; flex-direction: column; align-items: center;">
+    <div class="text-content" style="text-align: center;">
+      <div style="overflow: hidden; text-align: center;">
+        <img src="../image/jab.jpg">
+      </div>
+      </div>
+      <h2>[재료]</h2>
+      <p>5~6인분 기준</p>
+      <p>(계량 : 밥 숟가락, 소주잔)</p>
+      <p>cf. 소주잔 1잔 = 50ml</p>
+      <p>당면 : 300g</p>
+      <p>당근 : 1/2개</p>
+      <p>양파 : 2개</p>
+      <p>표고버섯 : 3~4개</p>
+      <p>시금치 : 한 줌</p>
+      <p>식용유 : 1/2컵 (소주잔 기준)</p>
+      <p>후추 : 2 꼬집</p>
+      <p>소금 : 2 꼬집</p>
+      <p>물 : 8컵 (400ml) (소주잔 기준)</p>
+      <p>콜라 : 2컵 (100ml) (소주잔 기준)</p>
+      <p>진간장 : 1컵반 (75ml) (소주잔 기준)</p>
+      <p>설탕 : 1/2컵 (소주잔 기준)</p>
+      <p>굴소스 : 1숟가락 (밥 숟가락 기준)</p>
+      <p>다진마늘 : 1숟가락 (밥 숟가락 기준)</p>
+      <p>미원 : 1/2숟가락 (밥 숟가락 기준)</p>
+      <p>참기름 : 1숟가락 (밥 숟가락 기준)</p>
+      <p>깨 : 취향껏</p>
+      <br>
+      <br>
+      <p>[재료 준비]</p>
+      <p>1. 당면 300g (마른당면 기준)을 물에 불려 준비한다.</p>
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab1.jpg">
+    </div>
+    <p>2. 당근 1/2개를 얇게 채썰어 준비한다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab2.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab3.jpg">
+    </div>
+    <p>3. 양파 2개 (작은 양파 사용)을 채썰어 준비한다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab4.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab5.jpg">
+    </div>
+    <p>4. 표고버섯 3~4개를 먹기 좋게 채썰어 준비한다.</p>
+    <p>5. 시금치 한 줌을 손질한 후 깨끗이 씻어 준비한다.</p>
+    <p>* 잡채에 들어가는 채소 및 재료는 기호에 따라, 냉장고에 남아있는 재료에 따라 취향껏 넣어주면 된다.</p>
+    <p>* 부추, 어묵, 유부, 파프리카, 목이버섯(불려서 사용) 등의 각종 채소를 강추!</p>
+    <p>단, 부추의 경우 숨이 금방 죽으므로 시금치를 넣을 때 같이 넣어준다.</p>
+    <br>
+    <p>[조리 과정]</p>
+    <p>1. 냄비에 식용유를 소주잔으로 1/2컵 (25ml)을 넣고 잡채용 돼지 등심 200g을 넣고 소금 조금(약 2꼬집)과</p>
+    <p>후추 조금(약 2꼬집)로 고기의 밑간을 해준 뒤 젓가락으로 고기가 노릇해질 때까지 볶아준다.</p>
+    <p>돼지고기는 부위에 상관없이 마트나 시장에서 ‘잡채용’이라고 되어있는
+    <p>손가락 길이 정도로 길쭉하게 손질되어 있는 돼지고기를 사용하면 된다.</p>
+    <p>잡채에 사용되는 돼지고기는 주로 등심이나 뒷다리살 등 지방이 적은 살코기 위주의 부위를 사용한다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab6.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab7.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab8.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab9.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab10.jpg">
+    </div>
+    <p>2. 고기가 노릇하게 익으면 소주잔으로 물 8컵 (400ml)과 소주잔 기준 콜라 2컵 (100ml)을 넣어준다.</p>
+    <p>잡채에 콜라가 들어가는 것은 생소할 수 있는데 설탕 대신에 콜라를 사용하면 음식 전반의 단 맛을 낼 뿐만 아니라</p>
+    <p>흔히 잡채에 흑설탕을 넣어 먹음직스럽고 윤기나는 빛깔을 내듯콜라 또한 그러한 역할을 한다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab11.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab12.jpg">
+    </div>
+    <p>3. 진간장 소주잔 기준 1컵반 (1+1/2컵) (75ml)과 설탕 1/2컵 (25g), 밥 숟가락 기준 굴소스 1숟가락, 다진마늘 1숟가락, 미원 1/2숟가락을 넣고 잘 풀어지도록 섞어준다.</p>
+    <p>레시피에서 소개하는 msg (미원, 소고기 다시다, 멸치 다시다 등) 종류는 언제까지나 선택 사항으로 취향에 맞게 넣어주면 된다.</p>
+    <p>(화학 조미료를 원치 않으면 넣지 않고, 조리 중간 간을 보고 소금, 액젓 등으로 간을 맞추면 된다!)</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab13.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab14.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab15.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab16.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab17.jpg">
+    </div>
+    <p>4. 미리 채썰어 준비해둔 당근 1/2개, 양파 2개, 표고버섯 한 줌을 넣어준다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab18.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab19.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab20.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab21.jpg">
+    </div>
+    <p>5. 채소를 넣자마자 채소가 익기 전 30분 이상 불려둔 당면 300g을 넣은 후 강불에서 양념이 졸아 없어질 때까지 젓가락으로 휘저어가며 볶아준다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab22.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab23.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab24.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab25.jpg">
+    </div>
+    <p>6. 국물이 면과 채소에 베여 없어지면 불을 끄고(중요) 손질해 준비해둔 시금치 한 줌을 넣고 집게 또는 젓가락으로 면과 잘 섞어준다. </p>
+    <p>시금치는 불을 끄기전에 넣으면 향긋한 향도 나 날아갈 뿐만 아니라 질겨지기 때문에 불을 끄고 남아있는 열기로 숨을 죽여가며 익혀도 충분하다.</p>
+    <p>(부추를 넣을 경우 시금치와 같이 넣어주면 된다.)</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab26.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab27.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab28.jpg">
+    </div>
+      <p>7. 마지막으로 참기름 1숟가락을 넣고 통깨를 뿌려 잘 섞어주며 먹음직스럽게 마무리한다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab29.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab30.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab31.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/jab32.jpg">
+    </div>
+    </div>
+    <p>완성된 잡채!</p>
+  </article>
+</div>
+</body>
+</html>

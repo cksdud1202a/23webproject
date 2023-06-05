@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비빔국수 레시피</title>
+  <link rel="stylesheet" href="../css/mystyle.css">
+  <style>
+    body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+    aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #999988;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    }
+    main {
+    margin-left: 30%;
+    padding: 20px;
+    box-sizing: border-box;
+    }
+    body.scroll-aside aside {
+    transform: translateY(0);
+    }
+    .article1 {
+    float: right;
+    padding: 20px;
+    box-sizing:border-box; 
+           /* 박스모델에서 박스의 크기는 기본적으로 콘텐츠의 크기만 계산(box-sizing:content-box;)
+           아래에서 넓이를 70%로 지정했는데 패딩의 크기가 20px이 있어 실제 크기는 70%를 초과하게 됨
+           box-sizing을 border-box 로 지정하면 **박스 크기 = 콘텐츠 크기+padding크기+border크기의 합**
+           패딩의 크기를 포함한 article 영역의 전체 넓이를 70%로 맞추기 위해 border-box로 지정함 */
+    width: 70%;
+    background-color: #f1f1f1;
+    height: auto; /* only for demonstration, should be removed */
+    overflow-y: auto
+    }
+  </style>
+</head>
+<body>
+  <svg height="120" width="100%">
+    <!-- <defs> 요소는 그래픽 객체를 정의, <def> 요소 내에서 만든 객체는 출력되는 것은 아님
+         나중에 사용하려면 fill 속성에 참조 연결하거나 <use> 요소를 이용해야함 
+         <def> 요소 내에 선형그레디언트 정의 -->
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#973131;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(34, 141, 141);stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <rect fill="url(#grad1)" x="0" y="0" width="100%" height="120" />
+    <text fill="#ffffff" font-size="60" font-family="Verdana" x="50" y="80">컴퓨터공학과 20200158 김찬영</text>
+    Sorry, your browser does not support inline SVG.
+  </svg>
+    
+  <ul>
+    <li><a class="active" href="https://cksdud1202a.github.io/23webproject">Home</a></li>
+    <li><a href="../html/cooking.html">요리</a></li>
+    <li><a href="../html/playlist.html">플레이리스트</a></li>
+    <li><a href="../html/travel.html">여행지</a></li>
+    <li><a href="../html/drama.html">드라마</a></li>
+  </ul>
+
+  <div>
+    <ul class="vertical-menu">
+      <li class="vertical-menu-item"><a href="../html/cooking.html">잡채</a></li>
+      <li class="vertical-menu-item"><a href="./doenjang.html">된장찌개</a></li>
+      <li class="vertical-menu-item"><a href="./noodle.html">비빔국수</a></li>
+      <li class="vertical-menu-item"><a href="./egg.html">에그드랍4</a></li>
+    </ul>
+  </div>
+  <script>
+    window.addEventListener('scroll', function() {
+      const body = document.body;
+      const aside = document.querySelector('aside');
+      const bodyScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      
+      if (bodyScrollTop > 0) {
+        body.classList.add('scroll-aside');
+      } else {
+        body.classList.remove('scroll-aside');
+      }
+    });
+  </script>
+    <h1 id="box2">비빔국수</h1>
+  <aside>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="video"> 
+      <div class="video-wrapper">
+        <iframe width="520" height="450" src="https://www.youtube.com/embed/1ezy6QNKGG0"></iframe>
+      </div>
+    </div>
+    <div class="source">
+      <a href="https://chef-choice.tistory.com/64">레시피 출처: 1분요리 뚝딱이형</a>
+    </div>
+  </aside>
+
+  <article class="article1" style="display: flex; flex-direction: column; align-items: center;">
+    <div class="text-content" style="text-align: center;">
+      <div style="overflow: hidden; text-align: center;">
+        <img src="../image/n1.jpg">
+      </div>
+      </div>
+      <h2>[재료]</h2>
+      <p>< 양념장 재료 ></p>
+      <p>4인분 기준</p>
+      <p>(계량 : 밥 숟가락, 종이컵)</p>
+      <p>조리도구 : 믹서기 필요</p>
+      <p>사과 : 1/2개</p>
+      <p>양파 : 1/4개</p>
+      <p>칠성 사이다 : 1컵 (종이컵 기준, 180ml)</p>
+      <p>고추장 : 2숟가락</p>
+      <p>진간장 : 2숟가락</p>
+      <p>고춧가루 : 2숟가락</p>
+      <p>설탕 : 2숟가락</p>
+      <p>물엿 : 2숟가락</p>
+      <p>식초 : 2숟가락</p>
+      <p>청양고추 : 1개</p>
+      <br>
+      <p>< 그 외 토핑재료 ></p>
+      <p>1인분 기준</p>
+      <p>소면 : 1인분</p>
+      <p>시판 초고추장 : 1숟가락</p>
+      <p>다진 김치 : 1~2숟가락</p>
+      <p>상추 : 조금</p>
+      <p>김가루 : 조금</p>
+      <p>깨 : 1숟가락</p>
+      <p>참기름 (또는 들기름) : 1숟가락</p>
+      <br>
+      <br>
+      <p>[조리 과정]</p>
+      <p>1. 믹서기에 아래의 재료를 모두 넣고 곱게 갈아준다.</p>
+      <p>1) 사과 1/2개</p>
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n2.jpg">
+    </div>
+    <p>2) 양파 1/4개</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n3.jpg">
+    </div>
+    <p>3) 칠성 사이다 1컵 (종이컵 기준, 180ml)</p>
+    <div style="overflow: hidden; text-align: center;">
+        <img src="../image/n4.jpg">
+      </div>
+    <p>4) 고추장 2숟가락</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n5.jpg">
+    </div>
+    <p>5) 진간장 2숟가락</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n6.jpg">
+    </div>
+    <p>6) 고춧가루 2숟가락</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n7.jpg">
+    </div>
+    <p>7) 설탕 2숟가락</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n8.jpg">
+    </div>
+    <p>8) 물엿 2숟가락</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n9.jpg">
+    </div>
+    <p>9) 식초 2숟가락</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n10.jpg">
+    </div>
+    <p>10) 청양고추 1개</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n11.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n12.jpg">
+    </div>
+    <p>2. 소면 또는 중면을 먹을만큼 삶아 찬물에 행군 뒤 두 손가락으로 국수를 돌돌말아 예쁘게 세팅한다.</p>>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n13.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n14.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n15.jpg">
+    </div>
+    <p>3. 시판 초고추장 1숟가락을 국수 위에 올리고 만들어둔 비빔국수 양념장 8숟가락을 올려준다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n16.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n17.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n18.jpg">
+    </div>
+    <p>4. 다진 김치 1~2숟가락을 올린 뒤 기호에 따라 상추 등의 채소와 김가루를 올려준다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n19.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n20.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n21.jpg">
+    </div>
+    <p>5. 통깨 1숟가락을 절구에 넣고 빻아서 깻가루를 만들어준다. 깨를 절구에 갈아서 넣으면 그 고소함이 극대화된다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n22.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n23.jpg">
+    </div>
+    <p>5. 통깨 1숟가락을 절구에 넣고 빻아서 깻가루를 만들어준다. 깨를 절구에 갈아서 넣으면 그 고소함이 극대화된다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n24.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n25.jpg">
+    </div>
+      <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n26.jpg">
+    </div>
+      <div style="overflow: hidden; text-align: center;">
+      <img src="../image/n27.jpg">
+    </div>
+    <p>완성된 비빔국수!</p>
+  </article>
+</div>
+</body>
+</html>
