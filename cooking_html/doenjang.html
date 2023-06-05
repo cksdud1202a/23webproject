@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>된장찌개 레시피</title>
+  <link rel="stylesheet" href="../css/mystyle.css">
+  <style>
+    body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+    aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #999988;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    }
+    main {
+    margin-left: 30%;
+    padding: 20px;
+    box-sizing: border-box;
+    }
+    body.scroll-aside aside {
+    transform: translateY(0);
+    }
+    .article1 {
+    float: right;
+    padding: 20px;
+    box-sizing:border-box; 
+           /* 박스모델에서 박스의 크기는 기본적으로 콘텐츠의 크기만 계산(box-sizing:content-box;)
+           아래에서 넓이를 70%로 지정했는데 패딩의 크기가 20px이 있어 실제 크기는 70%를 초과하게 됨
+           box-sizing을 border-box 로 지정하면 **박스 크기 = 콘텐츠 크기+padding크기+border크기의 합**
+           패딩의 크기를 포함한 article 영역의 전체 넓이를 70%로 맞추기 위해 border-box로 지정함 */
+    width: 70%;
+    background-color: #f1f1f1;
+    height: auto; /* only for demonstration, should be removed */
+    overflow-y: auto
+    }
+  </style>
+</head>
+<body>
+  <svg height="120" width="100%">
+    <!-- <defs> 요소는 그래픽 객체를 정의, <def> 요소 내에서 만든 객체는 출력되는 것은 아님
+         나중에 사용하려면 fill 속성에 참조 연결하거나 <use> 요소를 이용해야함 
+         <def> 요소 내에 선형그레디언트 정의 -->
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#973131;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(34, 141, 141);stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <rect fill="url(#grad1)" x="0" y="0" width="100%" height="120" />
+    <text fill="#ffffff" font-size="60" font-family="Verdana" x="50" y="80">컴퓨터공학과 20200158 김찬영</text>
+    Sorry, your browser does not support inline SVG.
+  </svg>
+    
+  <ul>
+    <li><a class="active" href="https://cksdud1202a.github.io/23webproject">Home</a></li>
+    <li><a href="../html/cooking.html">요리</a></li>
+    <li><a href="../html/playlist.html">플레이리스트</a></li>
+    <li><a href="../html/travel.html">여행지</a></li>
+    <li><a href="../html/drama.html">드라마</a></li>
+  </ul>
+
+  <div>
+    <ul class="vertical-menu">
+      <li class="vertical-menu-item"><a href="../html/cooking.html">잡채</a></li>
+      <li class="vertical-menu-item"><a href="./doenjang.html">된장찌개</a></li>
+      <li class="vertical-menu-item"><a href="./noodle.html">비빔국수</a></li>
+      <li class="vertical-menu-item"><a href="./egg.html">에그드랍</a></li>
+    </ul>
+  </div>
+  <script>
+    window.addEventListener('scroll', function() {
+      const body = document.body;
+      const aside = document.querySelector('aside');
+      const bodyScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      
+      if (bodyScrollTop > 0) {
+        body.classList.add('scroll-aside');
+      } else {
+        body.classList.remove('scroll-aside');
+      }
+    });
+  </script>
+    <h1 id="box2">된장찌개</h1>
+  <aside>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="video"> 
+      <div class="video-wrapper">
+        <iframe width="520" height="450" src="https://www.youtube.com/embed/J4vEoFVcguw"></iframe>
+      </div>
+    </div>
+    <div class="source">
+      <a href="https://chef-choice.tistory.com/2">레시피 출처: 1분요리 뚝딱이형</a>
+    </div>
+  </aside>
+
+  <article class="article1" style="display: flex; flex-direction: column; align-items: center;">
+    <div class="text-content" style="text-align: center;">
+      <div style="overflow: hidden; text-align: center;">
+        <img src="../image2/doen1.jpg">
+      </div>
+      </div>
+      <h2>[재료]</h2>
+      <p>1~2인분 기준</p>
+      <p>(계량 : 밥 숟가락, 종이컵) </p>
+      <p>식용유 : 1숟가락 </p>
+      <p>된장 : 3숟가락</p>
+      <p>쌈장 : 2숟가락</p>
+      <p>고추장 : 1/2숟가락</p>
+      <p>애호박 : 1/4개</p>
+      <p>양파 : 1/4개</p>
+      <p>두부 : 1/2모</p>
+      <p>감자 : 1/4개</p>
+      <p>팽이버섯 조금</p>
+      <p>대파 : 2숟가락 (약 1대)</p>
+      <br>
+      <br>
+      <p>[재료 준비]</p>
+      <p>1. 애호박 1/4개를 먹기 좋은 한입크리고 썰어준다.</p>
+      <p>먹기 좋은 두깨와 크기로 반달썰기해준다. </p>
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen2.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen3.jpg">
+    </div>
+    <p>2. 양파 1/4개를 썰어준다. </p>
+    <p>고깃집 된장찌개를 만들떄 양파는 자연스러운 감칠맛과 단맛을 끌어올려주는 역할을 한다. </p>
+    <div style="overflow: hidden; text-align: center;">
+        <img src="../image2/doen4.jpg">
+      </div>
+    <p>3. 대파 약 1대 썰어준다.</p>
+    <p>대파는 된장찌개의 감칠맛을 돋우워줄 뿐만 아니라 느끼한 맛까지 깔끔하게 잡아주는 역할을 한다. </p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen5.jpg">
+    </div>
+    <p>[조리 순서]</p>
+    <p>1. 뚝배기 또는 냄비에 식용유 한 숟가락을 넣어 예열한다. </p>
+    <p>숟가락 또는 솔로 저어주면서 식용유를 넣고 뚝배기의 모든 면에 코팅을 해준다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen6.jpg">
+    </div>
+    <p>2. 된장 3숟가락, 쌈장 2숟가락 (3:2 비율)을 넣어 약불에서 식용유에 볶아준다.</p>
+    <p>이때 양념이 뚝배기에 늘러붙지 않도록 약불에서 끊임없이 저어주는 것이 중요하다. </p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen7.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen8.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen9.jpg">
+    </div>
+    <p>3. 고추장 1/2숟가락을 추가로 넣어 숟가락으로 저어가며 양념이 뚝배기에 눌러붙지 않게 약불에서 볶아준다.</p>
+    <p>불이 강하면 양념이 탈 수도 있기에 물을 넣기 전까지 반드시 약불~중불을 유지해주는 것이 중요하다. </p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen10.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen11.jpg">
+    </div>
+    <p>4. 종이컵 2컵정도의 물을 넣어 끓여준다. </p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen12.jpg">
+    </div>
+    <p>5. 숟가락으로 천천히 저어가며 넣었던 양념을 잘 풀어준다.</p>
+    <p>양념이 잘 풀어지지 않으면 고깃집 된장찌개의 진한맛을 표현할 수 없기 떄문에 반드시 이 과정에서 넣어준 모든 양념을 물에 잘 풀어주어야 한다</p>
+    <br>
+    <p>6. 물이 끓기 시작하면 미리 썰어둔 애호박 1/4개, 양파 1/4개, 두부 반모를 순서대로 찌개에 넣어준다. </p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen13.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen14.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen15.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen16.jpg">
+    </div>
+    <p>7. 그 외에도 감자, 팽이버섯, 표고버섯 등의 각종 채소를 넣어주면 더욱 맛있게 만들 수 있다.</p>
+    <p>취향에 따라 집에 있는 냉장고에 남는 각종 채소와 버섯을 넣어주면 맛있고 풍미있는 된장찌개가 된다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen17.jpg">
+    </div>
+    <p>8. 마지막으로 썰어둔 대파를 2숟가락 정도 넣어준다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen18.jpg">
+    </div>
+    <p>9. 기호에 맞게 멸치 다시다 약 1/2 숟가락 넣어준다.</p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen19.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen20.jpg">
+    </div>
+    <p>10. 취향에 따라 차돌박이 또는 대패 삼겹살을 추가로 넣어준다. </p>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen21.jpg">
+    </div>
+    <div style="overflow: hidden; text-align: center;">
+      <img src="../image2/doen22.jpg">
+    </div>
+    <p>완성된 된장찌개!</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </article>
+</div>
+</body>
+</html>
